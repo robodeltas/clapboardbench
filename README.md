@@ -13,29 +13,29 @@ grippers through the same tool interface, one motion per LLM call.
 
 ## Read the runs (start here)
 
-Open **[2026-07-31/runs/](2026-07-31/runs/)**. GitHub renders the index
-table directly: 11 runs labeled `gemini-1` to `gemini-5`, `opus-1` to
-`opus-5` (chronological within each model), and `opus-early`, with
-outcome, steps, and duration. Each run page shows:
+Open **[2026-07-31/runs-html/](2026-07-31/runs-html/)**, download a run
+page, and open it in a browser (GitHub does not render HTML in place;
+`index.html` is the run index). The 11 runs are labeled `gemini-1` to
+`gemini-5`, `opus-1` to `opus-5` (chronological within each model), and
+`opus-early`. Each page is a single self-contained file rendered with
+`inspect-robots view`:
 
 - a metadata header (model, effort, outcome, operator judgement, timing),
-- every observation expanded in place: joint states plus the exact
-  224x224 camera frames the model received at that step,
 - the full turn-by-turn transcript: the model's note and tool call for
-  every motion, with the system prompt collapsed behind a click,
-- links to per-camera MP4s of the whole run, playable in the browser.
+  every motion, with the exact 224x224 camera frames and joint states
+  the model received inline at each step,
+- per-camera flipbook scrubbing and an embedded video of the whole run,
+  synced to the transcript,
+- the raw API wire capture rendered in place.
 
-For a richer read, download a run page from
-[2026-07-31/runs-html/](2026-07-31/runs-html/) and open it in a browser:
-self-contained HTML reports rendered with `inspect-robots view` (inline
-camera frames, per-camera flipbook scrubbing, an embedded video synced
-to the transcript, and the raw wire capture expanded in place;
-`index.html` is the run index). Rerun recordings of every run live in
-[2026-07-31/rrd/](2026-07-31/rrd/) — camera streams, joint-position
-series, and the transcript on the step timeline; view with
-`rerun <file>.rrd` or at [rerun.io/viewer](https://rerun.io/viewer),
-and see [rrd/README.md](2026-07-31/rrd/README.md) for the per-run
-index.
+To read directly on GitHub without downloading anything, the same runs
+are rendered as markdown in [2026-07-31/runs/](2026-07-31/runs/), with
+an index table (outcome, steps, duration) and per-run pages. Rerun
+recordings of every run live in [2026-07-31/rrd/](2026-07-31/rrd/) —
+camera streams, joint-position series, and the transcript on the step
+timeline; view with `rerun <file>.rrd` or at
+[rerun.io/viewer](https://rerun.io/viewer), and see
+[rrd/README.md](2026-07-31/rrd/README.md) for the per-run index.
 
 ## What is in a run
 
