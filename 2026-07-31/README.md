@@ -17,7 +17,17 @@ Selection:
 - opus-early: `adhoc_00efecfc` (claude-opus-5, 00:51 UTC), the
   operator-judged pass.
 
-Browse the runs as markdown in [runs/](runs/). Layout: `adhoc_*.json`
-EvalLogs, `transcripts/<stamp>/`, `videos/<stamp>/`, `wire/<stamp>/`.
-Files are verbatim copies from the full capture window, which is
-retained internally.
+Browse the runs as markdown in [runs/](runs/), or as self-contained HTML
+reports in [runs-html/](runs-html/) (rendered with `inspect-robots view`
+0.53.0: inline camera frames, per-camera flipbooks, embedded video, and
+the raw wire capture; open `index.html` for the run index). Rerun
+recordings rebuilt offline from the stored frames and wire logs live in
+[rrd/](rrd/) — see [rrd/README.md](rrd/README.md) for the per-run index;
+view with `rerun <file>.rrd` or at
+[rerun.io/viewer](https://rerun.io/viewer).
+
+Layout: `adhoc_*.json` EvalLogs, `transcripts/<stamp>/`,
+`videos/<stamp>/`, `wire/<stamp>/`. Files are verbatim copies from the
+full capture window, which is retained internally; `runs-html/` and
+`rrd/` are derived from that capture (the raw camera-frame stores they
+embed are internal-only).

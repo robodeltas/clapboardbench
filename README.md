@@ -25,6 +25,18 @@ outcome, steps, and duration. Each run page shows:
   every motion, with the system prompt collapsed behind a click,
 - links to per-camera MP4s of the whole run, playable in the browser.
 
+For a richer read, download a run page from
+[2026-07-31/runs-html/](2026-07-31/runs-html/) and open it in a browser:
+self-contained HTML reports rendered with `inspect-robots view` (inline
+camera frames, per-camera flipbook scrubbing, an embedded video synced
+to the transcript, and the raw wire capture expanded in place;
+`index.html` is the run index). Rerun recordings of every run live in
+[2026-07-31/rrd/](2026-07-31/rrd/) — camera streams, joint-position
+series, and the transcript on the step timeline; view with
+`rerun <file>.rrd` or at [rerun.io/viewer](https://rerun.io/viewer),
+and see [rrd/README.md](2026-07-31/rrd/README.md) for the per-run
+index.
+
 ## What is in a run
 
 | What | Where |
@@ -33,6 +45,8 @@ outcome, steps, and duration. Each run page shows:
 | Per-trial message transcript | `2026-07-31/transcripts/<stamp>/scene-*.jsonl` |
 | Raw API wire capture, images deduplicated as content-addressed blobs | `2026-07-31/wire/<stamp>/` |
 | Camera videos (one MP4 per trial and camera) | `2026-07-31/videos/<stamp>/` |
+| Self-contained HTML report (`inspect-robots view`) | `2026-07-31/runs-html/<run>.html` |
+| Rerun recording (rebuilt offline from the capture) | `2026-07-31/rrd/<run>.rrd` |
 
 Runs are cross-referenced by `<stamp>` (the basename of each log's
 `stats.frames_dir`). The markdown pages are deterministic renders of
